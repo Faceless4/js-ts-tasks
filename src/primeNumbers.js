@@ -6,7 +6,9 @@
 module.exports.primeNumbers = function primeNumbers(highestNumber) {
   return function(lowestNumber) {
     const primes = [];
+
     for (let i = lowestNumber; i <= highestNumber; i++) {
+      if (i < 2) continue; 
       let isPrime = true;
       for (let j = 2; j <= Math.sqrt(i); j++) {
         if (i % j === 0) {
@@ -14,7 +16,7 @@ module.exports.primeNumbers = function primeNumbers(highestNumber) {
           break;
         }
       }
-      if (isPrime && i > 1) {
+      if (isPrime) {
         primes.push(i);
       }
     }
