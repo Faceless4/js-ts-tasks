@@ -7,8 +7,8 @@
  * @returns {number}
  */
 module.exports.getDistance = function getDistance(firstPoint, secondPoint) {
-  const deltaX = secondPoint.x - firstPoint.x;
-  const deltaY = secondPoint.y - firstPoint.y;
+  const deltaX = secondPoint.X - firstPoint.X;
+  const deltaY = secondPoint.Y - firstPoint.Y;
   const distance = Math.sqrt(deltaX *deltaX + deltaY * deltaY);
   
   return parseFloat(distance.toFixed(2));
