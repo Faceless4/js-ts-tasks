@@ -9,6 +9,8 @@
 module.exports.getDistance = function getDistance(firstPoint, secondPoint) {
   const deltaX = secondPoint.x - firstPoint.x;
   const deltaY = secondPoint.y - firstPoint.y;
-  const distance = Math.sqrt(deltaX ** 2 + deltaY ** 2);
+  const distance = Math.sqrt(deltaX *deltaX + deltaY * deltaY);
   
   return parseFloat(distance.toFixed(2));
+
+}
