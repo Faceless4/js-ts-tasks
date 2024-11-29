@@ -13,7 +13,7 @@
  * @returns {function}
  */
 module.exports.palindrome = function palindrome(TestUtils) {
-  return function (input) {
+  return function () {
     const cleanedInput = String(input)
       .toLowerCase() 
       .replace(/[^a-z0-9]/g, ''); // Remove non-alphanumeric characters
