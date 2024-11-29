@@ -18,6 +18,6 @@ module.exports.palindrome = function palindrome(TestUtils) {
       const Object={
         str: word
       }
-    TestUtils.isPalindrome.call(Object, word); 
+    return TestUtils.isPalindrome.call(Object, word); 
   };
 };
