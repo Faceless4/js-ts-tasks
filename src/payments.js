@@ -23,10 +23,7 @@
  * @returns {function}
  */
 module.exports.payments = function payments(TestUtils) {
-  return function (income, debts) {
-    const totalIncome = TestUtils.sumAllObjectProperties(income); 
-    const totalDebts = TestUtils.sumAllObjectProperties(debts);   
-
-    return totalIncome - totalDebts; 
-  };
+  return function(income, debts) {
+    return (sumAllObjectProperties(income) - sumAllObjectProperties(debts));
+  }
 };
