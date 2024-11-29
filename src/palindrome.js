@@ -14,11 +14,9 @@
  */
 module.exports.palindrome = function palindrome(TestUtils) {
   return function (word) { 
-    const cleanedInput = word 
-      .toLowerCase()
-      .replace(/[^a-z0-9]/g, ''); 
+    word=word.toString().toLowerCase().replace(/\W/g,'');
       const Object={
-        str:cleanedInput
+        str: word
       }
     TestUtils.isPalindrome.call(Object, word); 
   };
